@@ -1,0 +1,1 @@
+This is collection of all the programming exercises in the lab mnaual. It covers the use of functions and optimized lines of code for maximum output and efficiency in your code.
