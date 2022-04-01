@@ -1,20 +1,18 @@
-#include <iostream>
+#include <bits/stdc++.h> 
 using namespace std;
+
 int main()
 {
- int n1, n2, r, s=0; //declaration of variables
- cout << "\nPROGRAM TO FIND THE SUM OF GIVEN NUMBERS\n";
- cout << "=========================================\n";
- cout << "Input a number: ";
- cin >> n1; //user inputs number1
- n2 = n1;
- while (n1 > 0) 
- {
- r = n1 % 10;
- n1 = n1 / 10;
- s = s + r; //calculates sum
- }
-cout << "The sum of digits of " << n2 << " is: " << s <<endl; //displays sum of digits
-return 0;//end program
+    int num, num1, rev_num = 0;
+    cout<<"\nPROGRAM TO FIND THE REVERSE OF A GIVEN NUMBER"<<endl;
+    cout<<"============================================="<<endl;
+    cout<<"Enter a number: ", cin>>num;
+    num1=num;
+    while (num > 0) {
+        rev_num = rev_num * 10 + num % 10;
+        num = num / 10;
+    }
+    cout << "Reverse of "<<num1<<" is " << (rev_num)<<endl;
+    getchar();
+    return 0;
 }
-
