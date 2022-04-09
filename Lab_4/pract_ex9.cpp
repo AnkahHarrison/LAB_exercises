@@ -19,6 +19,34 @@ void invertedRightHalfTriangle()
         cout << endl;
     }
 }
+void fullTriangleNumbers(){
+    int k, count=0, count1;
+    for(int i = 1; i <= 6; ++i)
+    {
+        for(int j = 1; j <= 6-i; ++j)
+        {
+            cout << "  ";
+            ++count;
+        }
+        while(k!=(2*i-1))
+        {
+            if (count<6)
+            {
+                cout << i+k << " ";
+                ++count;
+            }
+            else
+            {
+                ++count1;
+                cout << i+k-2*count1 << " ";
+            }
+            ++k;
+        }
+        count1 = count = k = 0;
+
+        cout << endl;
+    } 
+}
 
 void leftHalfTriangle()
 {
@@ -61,6 +89,7 @@ int main(){
     cout<<"2. Inverted Right Half triangle"<<endl;
     cout<<"3. Left Half triangle"<<endl;
     cout<<"4. Full Triangle"<<endl;
+    cout<<"5. Full triangle with number pattern"<<endl;
     cout<<"\nMake a choice: ", cin>>choice;
     cout<<"\n";
     switch(choice){
@@ -76,9 +105,13 @@ int main(){
         case 4:
             fullTriangle();
             break;
+        case 5:
+            fullTriangleNumbers();
+            break;
         default:
             cout<<"Invalid choice";
             system("cls");
     }
     }while(choice>=1 && choice<5);
 }
+
