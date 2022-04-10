@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <string>
 using namespace std;
 
 void isPrime(){
@@ -18,11 +19,15 @@ void isPrime(){
 
 }
 
-void armstrong(int a);
+int armstrong(int a){
+    if(a>0)
+    return (pow(a%10, 3)+armstrong(a/10));
+}
+
 void perfectNumber(int a);
 
 int main(){
-    int a,ch;
+ int a,ch;
 
     do{
         cout<<"\nPROGRAM TO CHECK IF A NUMBER IS PRIME, ARMSTRONG OR PERFECT"<<endl;
@@ -35,10 +40,15 @@ int main(){
             case 1:
                 isPrime();
                 break;
-            /*case 2:
-                armstrong(a);
+            case 2:
+                cout<<"Enter any number: ", cin>>a;
+                if(armstrong(a)==a){
+                cout<<"The value is an armstrong value!\n";
+                }else{
+                    cout<<"The value is not an armstrong!\n";
+                }
                 break;
-            case 3: 
+            /*case 3: 
                 perfectNumber(a);
                 break;
             */
@@ -47,3 +57,5 @@ int main(){
 
     }while(ch>0&&ch<4);
 }
+
+
