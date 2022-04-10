@@ -24,7 +24,22 @@ int armstrong(int a){
     return (pow(a%10, 3)+armstrong(a/10));
 }
 
-void perfectNumber(int a);
+void perfectNumber(int a){
+    cout<<"Enter the any number: ", cin>>a;
+    int sum=0;
+    for(int i=1; i<a; i++){
+        if(a%i==0){
+            sum=sum+i;
+        }
+    }
+
+    if(sum==a){
+        cout<<"The number is a perfect number.\n";        
+    }else{
+        cout<<"The number is not a perfect number.\n";
+    }
+
+}
 
 int main(){
  int a,ch;
@@ -48,10 +63,10 @@ int main(){
                     cout<<"The value is not an armstrong!\n";
                 }
                 break;
-            /*case 3: 
+            case 3: 
                 perfectNumber(a);
                 break;
-            */
+            
 
         }
 
