@@ -11,6 +11,9 @@ int evenOdd(int a){
 
 int main(){
     float a;
-    cout<<"\nEnter the value: ", cin>>a;
+    cout<<"PROGRAM TO DISPLAY IF A NUMBER IS EVEN OR ODD"<<endl;
+    cout<<"---------------------------------------------"<<endl;
+    cout<<"Enter the value: ", cin>>a;
     return evenOdd(a);
+    system("PAUSE /t 1");
 }

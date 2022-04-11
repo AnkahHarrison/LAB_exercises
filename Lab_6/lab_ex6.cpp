@@ -12,7 +12,8 @@ int factorial(int n){           //Recursive Function for Factorials
 
 int main(){
     int n;
-    cout<<"PROGRAM TO FIND THE FACTORIAL OF A NUMBER"<<endl;
+    cout<<"\nPROGRAM TO FIND THE FACTORIAL OF A NUMBER"<<endl;
+    cout<<"-------------------------------------------"<<endl;
     for(int i=1; i==1;i++){
         for(int j=i; j<=42; j++){
             cout<<"-";
@@ -23,4 +24,6 @@ int main(){
     
     cout<<"Enter the value to find factorial: ", cin>>n;
     cout<<factorial(n);
+    cout<<"\n";
+    system("PAUSE /t 1");
 }

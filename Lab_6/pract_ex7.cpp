@@ -17,10 +17,13 @@ void minNum(){
 int main(){
     int ch;
     do{
-    cout<<"\n1. Maximum Number"<<endl;
+    cout<<"\nPROGRAM TO DISPLAY MAXIMUM & MINIMUM VALUES"<<endl;
+    cout<<"--------------------------------------------"<<endl;
+    cout<<"1. Maximum Number"<<endl;
     cout<<"2. Minimum Number"<<endl;
     cout<<"Enter the operation: ", cin>>ch;
     switch(ch){
+
         case 1:
             maxNum();
             system("PAUSE /t 1");
@@ -31,9 +34,9 @@ int main(){
             system("PAUSE /t 1");
             system("cls");
             break;
+        
     }
     }while(ch>0&&ch<3);
     
-    
-    //minNum();
+  
 }

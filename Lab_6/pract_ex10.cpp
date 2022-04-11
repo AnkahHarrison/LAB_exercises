@@ -12,7 +12,10 @@ int power(int x, int y){
 
 int main(){
     int x,y;
+    cout<<"PROGRAM TO FIND THE POWER OF A NUMBERS"<<endl;
+    cout<<"--------------------------------------"<<endl;
     cout<<"Enter the values for the expression: ", cin>>x>>y;
     cout<<power(x,y);
-
+    cout<<endl;
+    system("PAUSE /t 1");
 }

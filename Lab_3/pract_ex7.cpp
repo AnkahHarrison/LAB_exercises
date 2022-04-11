@@ -5,11 +5,6 @@ int main(){
     e:
 int day;
 cout<<"What day would you like to know (1,2,3,4..)?: ", cin>>day;
-if(day>7 || day<0){
-            system("cls");
-            goto e;
-        }
-
 switch(day){
     case 1:
         cout<<"Sunday";
@@ -32,6 +27,9 @@ switch(day){
     case 7:
         cout<<"Saturday";
         break;
+    default:
+        system("cls");
+        goto e;
 
 }
 }

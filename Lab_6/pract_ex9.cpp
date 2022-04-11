@@ -38,6 +38,8 @@ void perfectNumber(int a){
     }else{
         cout<<"The number is not a perfect number.\n";
     }
+    system("PAUSE /t 1");
+
 
 }
 

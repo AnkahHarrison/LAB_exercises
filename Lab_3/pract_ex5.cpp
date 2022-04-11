@@ -3,9 +3,11 @@ using namespace std;
  
 int main()
 {
-    int n,number;
+    int n;
     cout<<"Enter a number: ", cin>>n;
-    number=(n == 1 || n == 0) ? 1 : n*(n - 1);
-    cout << "Factorial of " << n<< " is "<<number;
-    return 0;
+    int number=n;
+    for(int i=n-1; i>0&&i<n;i--){
+        number=number*i;
+    }
+    cout<<number;
 }

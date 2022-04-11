@@ -1,34 +1,33 @@
 #include <iostream>
-#include <windows.h>
-#define NWLN "\n"
-using std::cout;
-using std::cin;
-using std::endl;
+using namespace std;
 
 int main(){
     int marks;
     e:
+    do{
     cout<<"Enter the marks: ", cin>>marks;
-    if(marks>100){
-        cout<<"Invalid marks";
-        system("cls");
-        goto e;
-    }
-    if(marks<=100 && marks>=80){
-        if(marks>=90){
-        cout<<"You had grade A++";
-        }else{
-        cout<<"You had grade A";
+    if(marks<=100 && marks>=90){
+            if(marks==100){
+                cout<<"Perfect Score!";
+            } 
+            cout<<'A';
+        }else if(marks>=80&&marks<90){
+            cout<<'B';
+        }else if(marks>=70&&marks<80){
+            cout<<'C';
+        }else if(marks>=60&&marks<70){
+            cout<<'D';
         }
-    }else if(marks<80 && marks>=60){
-        if(marks>=70){
-            cout<<"You had grade B++";
-        }else{
-        cout<<"You had grade B";
-        }
-    }else if(marks>=50 && marks<60){
-        cout<<"You had grade C";
-    }else{
-        cout<<"You had grade F"<<endl;
+        break;
     }
+    while(marks>=0&&marks<=100);
+    if(!(marks>=0&&marks<=100)){
+            cout<<"Invalid Score"<<endl;
+            system("PAUSE /t 1");
+            system("cls");
+            goto e;
+
+        }
 }
+
+

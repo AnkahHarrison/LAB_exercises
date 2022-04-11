@@ -47,7 +47,18 @@ void fullTriangleNumbers(){
         cout << endl;
     } 
 }
-
+void rightHalftTriangleLetters(){
+int i, j;
+char ch='A';
+for(i=0;i<6; i++){
+    for(j=0;j<=i;j++){
+        cout<<ch<<"";
+        ++ch;
+    }
+    cout<<endl;
+}
+cout<<endl;
+}
 void leftHalfTriangle()
 {
        for(int i=5; i>0; i--)
@@ -67,6 +78,25 @@ void leftHalfTriangle()
     }
 }
 
+void fullTriangleAlphabets(){
+     cout<<"Enter the row size:";
+  int row_size,out,in,p;
+  int np=1;
+  cin>>row_size;
+  for(out=0;out<row_size;out++)
+       {
+       for(in=row_size-1;in>out;in--)
+       {
+            cout<<" ";
+       }
+       for(p=0;p<np;p++)
+       {
+           cout<<(char)(out+65);
+       }
+       np+=2;
+       cout<<"\n";
+       }
+}
 void fullTriangle(){
     int n, k = 2 * n - 2;
     for (int i = 0; i < n; i++) {
@@ -90,6 +120,7 @@ int main(){
     cout<<"3. Left Half triangle"<<endl;
     cout<<"4. Full Triangle"<<endl;
     cout<<"5. Full triangle with number pattern"<<endl;
+    cout<<"6. Full triangle with number pattern"<<endl;
     cout<<"\nMake a choice: ", cin>>choice;
     cout<<"\n";
     switch(choice){
@@ -107,6 +138,9 @@ int main(){
             break;
         case 5:
             fullTriangleNumbers();
+            break;
+        case 6:
+            fullTriangleAlphabets();
             break;
         default:
             cout<<"Invalid choice";
